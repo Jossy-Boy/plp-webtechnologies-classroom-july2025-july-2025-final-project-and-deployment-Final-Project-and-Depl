@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Swift</title>
+  <meta name="description" content="Contact form for inquiries." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="images/logo.svg" alt="Swift Logo" class="logo-img"></a>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="container contact" aria-labelledby="contact-heading" style="padding:3rem 0">
+      <h1 id="contact-heading">Contact</h1>
+      <p>Want to work together? Send a message below.</p>
+
+      <form id="contact-form" class="contact-form" novalidate style="max-width:640px;margin-top:1.5rem">
+        <label>
+          <span>Your name</span>
+          <input type="text" name="name" required placeholder="Your name">
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required placeholder="you@example.com">
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="6" required placeholder="Tell me about the project..."></textarea>
+        </label>
+
+        <div class="form-feedback" aria-live="polite"></div>
+
+        <button type="submit" class="btn primary" style="margin-top:1rem">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Swift — Built with care.</p>
+      <nav class="footer-nav"><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

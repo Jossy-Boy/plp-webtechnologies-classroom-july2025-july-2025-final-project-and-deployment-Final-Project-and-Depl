@@ -1,93 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multipage Site (Single HTML Version)</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js"></script> 
-
-  <style>
-    /* Basic styling for demo */
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header, footer { background: #222; color: #fff; padding: 20px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
-    main { padding: 40px 20px; }
-    section { margin-bottom: 80px; }
-    h2 { margin-bottom: 10px; }
-    form input, form textarea { width: 100%; padding: 10px; margin: 10px 0; }
-    form button { padding: 10px 20px; background: #222; color: #fff; border: none; cursor: pointer; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swift — Portfolio</title>
+  <meta name="description" content="Portfolio: UI/UX, product design, prototyping." />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="home">
+        <img src="images/logo.svg" alt="Swift Logo" class="logo-img">
+      </a>
 
-  <!-- ⭐ HEADER (Shared across all pages) -->
-  <header>
-    <h1>My Website</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰</button>
+    </div>
   </header>
 
-  <!-- ⭐ MAIN CONTENT -->
   <main>
-
-    <!-- HOME SECTION -->
-    <section id="home">
-      <h2>Welcome to My Website</h2>
-      <p>This is the home page of your project. It introduces your brand, value, or purpose.</p>
+    <section class="hero container" aria-labelledby="home-heading">
+      <h1 id="home-heading">Designing fast, human-centered product experiences</h1>
+      <p class="lead">UI/UX design, prototyping, and product strategy for startups and digital teams.</p>
+      <div class="hero-ctas">
+        <a class="btn primary" href="services.html">View Services</a>
+        <a class="btn outline" href="contact.html">Contact</a>
+      </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        This section describes who you are, your mission, vision, and what makes your brand unique.
-      </p>
+    <section class="container projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Featured Projects</h2>
+      <div class="grid">
+        <article class="card fade-in">
+          <img src="images/hero.jpg" alt="Project screenshot">
+          <h3>Project One</h3>
+          <p>Short description with impact (e.g., +15% signups).</p>
+        </article>
+        <article class="card fade-in">
+          <img src="images/hero.jpg" alt="Project screenshot">
+          <h3>Project Two</h3>
+          <p>Short description focusing on problem & solution.</p>
+        </article>
+        <article class="card fade-in">
+          <img src="images/hero.jpg" alt="Project screenshot">
+          <h3>Project Three</h3>
+          <p>Short description + outcome.</p>
+        </article>
+      </div>
     </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Web Design & Development</li>
-        <li>UI/UX Prototyping</li>
-        <li>Branding & Visual Identity</li>
-      </ul>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Fill out the form below and we will get back to you shortly.</p>
-
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-
   </main>
 
-  <!-- ⭐ FOOTER -->
-  <footer>
-    <p>© 2025 My Website. All Rights Reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Swift — Built with care.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </footer>
 
-  <!-- ⭐ OPTIONAL JAVASCRIPT -->
-  <script>
-    // Example: simple form handler
-    document.getElementById("contactForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Message sent successfully!");
-    });
-  </script>
-
+  <script src="js/main.js" defer></script>
 </body>
 </html>
