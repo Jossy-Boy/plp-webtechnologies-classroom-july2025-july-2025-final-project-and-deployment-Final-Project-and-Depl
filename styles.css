@@ -1,0 +1,142 @@
+/* ---------------------------
+   GLOBAL BASE STYLES
+----------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f8f8f8;
+}
+
+main {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+/* ---------------------------
+   HEADER & NAVIGATION
+----------------------------*/
+header {
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00c6ff;
+}
+
+/* ---------------------------
+   MOBILE MENU BUTTON
+----------------------------*/
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ---------------------------
+   CONTACT FORM
+----------------------------*/
+form {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 25px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00c6ff;
+}
+
+/* ---------------------------
+   FOOTER
+----------------------------*/
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+----------------------------*/
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    padding: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 12px 0;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  header h1 {
+    margin-bottom: 0;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+}

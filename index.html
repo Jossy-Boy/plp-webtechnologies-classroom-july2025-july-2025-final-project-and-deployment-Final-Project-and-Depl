@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multipage Site (Single HTML Version)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script> 
+
+  <style>
+    /* Basic styling for demo */
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, footer { background: #222; color: #fff; padding: 20px; text-align: center; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; }
+    main { padding: 40px 20px; }
+    section { margin-bottom: 80px; }
+    h2 { margin-bottom: 10px; }
+    form input, form textarea { width: 100%; padding: 10px; margin: 10px 0; }
+    form button { padding: 10px 20px; background: #222; color: #fff; border: none; cursor: pointer; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ⭐ HEADER (Shared across all pages) -->
+  <header>
+    <h1>My Website</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ⭐ MAIN CONTENT -->
+  <main>
+
+    <!-- HOME SECTION -->
+    <section id="home">
+      <h2>Welcome to My Website</h2>
+      <p>This is the home page of your project. It introduces your brand, value, or purpose.</p>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        This section describes who you are, your mission, vision, and what makes your brand unique.
+      </p>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Web Design & Development</li>
+        <li>UI/UX Prototyping</li>
+        <li>Branding & Visual Identity</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Fill out the form below and we will get back to you shortly.</p>
+
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ⭐ FOOTER -->
+  <footer>
+    <p>© 2025 My Website. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ⭐ OPTIONAL JAVASCRIPT -->
+  <script>
+    // Example: simple form handler
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Message sent successfully!");
+    });
+  </script>
+
+</body>
+</html>
